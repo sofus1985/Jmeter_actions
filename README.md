@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center"><img src="https://jmeter.apache.org/images/logo.svg" alt="Apache JMeter logo" /></h1>
 
 An Open Source Java application designed to measure performance and load test applications.
@@ -288,3 +289,6 @@ Apache JMeter does not include any implementation of JSSE or JCE.
   >  This product includes software developed by the Indiana
   >  University Extreme! Lab.  For further information please visit
   >  http://www.extreme.indiana.edu/
+=======
+# Jmeter_actions
+>>>>>>> 5f1c8d6708a6cec19b9f333fa539faf43aa01748
