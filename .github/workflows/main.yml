@@ -24,11 +24,11 @@ jobs:
         run: |
           wget https://downloads.apache.org//jmeter/binaries/apache-jmeter-5.6.3.tgz
           tar -xzf apache-jmeter-5.6.3.tgz
-          
+
       - name: Run JMeter Tests
         run: |
-          ./apache-jmeter-5.6.3/bin/jmeter -n -t ${{ github.workspace }}/TestPlans/S01_SimpleExample/S01_SimpleExample.jmx -l result.jtl -e -o ./reports/html/
-        
+          ./apache-jmeter-5.6.3/bin/jmeter -n -t ${{ github.workspace }}/apache-jmeter-5.6.3/TestPlans/S01_SimpleExample/S01_SimpleExample.jmx -l result.jtl -e -o ./reports/html/
+
       - name: Upload Results
         uses: actions/upload-artifact@v3
         with:
@@ -42,3 +42,4 @@ jobs:
           name: jmeter-reports
           path: reports
           if-no-files-found: error
+
