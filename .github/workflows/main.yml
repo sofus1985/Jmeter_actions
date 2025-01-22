@@ -12,9 +12,11 @@ jobs:
 
       - name: Set up JMeter
         run: |
-          sudo apt-get update
-          wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.tgz
-          tar -xzf apache-jmeter-5.6.3.tgz
+          # Ensure JMeter directory exists in the repo
+          if [ ! -d "./apache-jmeter-5.6.3" ]; then
+            echo "JMeter directory not found! Ensure it is included in the repository."
+            exit 1
+          fi
           export JMETER_HOME=$PWD/apache-jmeter-5.6.3
           export PATH=$JMETER_HOME/bin:$PATH
 
@@ -42,5 +44,4 @@ jobs:
           name: jmeter-reports
           path: reports
           if-no-files-found: error
-
 
