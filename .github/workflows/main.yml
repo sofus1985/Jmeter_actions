@@ -1,4 +1,7 @@
+name: JMeter Test Execution
+
 on: [push]
+
 jobs:
   jmeter_job:
     runs-on: ubuntu-latest
