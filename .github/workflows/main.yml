@@ -30,7 +30,6 @@ jobs:
       - name: Run JMeter Tests
         run: |
           jmeter -n -t ./apache-jmeter-5.6.3\apache-jmeter-5.6.3\.github\workflows\main.yml -l result.jtl -e -o ./reports/html/
-
       - name: Upload Test Results
         uses: actions/upload-artifact@v4
         with:
@@ -44,4 +43,3 @@ jobs:
           name: jmeter-reports
           path: reports
           if-no-files-found: error
-
