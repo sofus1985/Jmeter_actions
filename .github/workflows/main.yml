@@ -27,7 +27,7 @@ jobs:
 
       - name: Run JMeter Tests
         run: |
-          ./apache-jmeter-5.6.3/bin/jmeter -n -t ${{ github.workspace }}/bin/project/opencart.jmx -l result.jtl -e -o ./reports/html/
+          ./apache-jmeter-5.6.3/bin/jmeter -n -t ${{ github.workspace }}/bin/project/opencart.jmx -l result.csv -e -o ./reports/html/
 
       - name: Upload Results
         uses: actions/upload-artifact@v3
